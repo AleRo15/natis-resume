@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050509">
+  <meta name="description" content="Nati's Event Archive — event support and creative work portfolio.">
+  <title>NATI'S EVENT ARCHIVE</title>
+  <link rel="icon" type="image/png" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <div class="crt" aria-hidden="true">
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+  </div>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div id="pixelCursor" aria-hidden="true"></div>
+
+  <!-- INTRO -->
+  <section class="screen intro" id="intro">
+    <div class="intro-grid"></div>
+
+    <div class="intro-content">
+      <div class="system-text">SYSTEM BOOT // EVENT ARCHIVE</div>
+
+      <div class="logo-wrap">
+        <div class="logo-small">EVENT SUPPORT DATABASE</div>
+        <h1 class="logo">NATI'S<br><span>EVENT ARCHIVE</span></h1>
+        <div class="logo-line">═══════════════════════════</div>
+        <p class="logo-sub">EVENT EXPERIENCE PORTFOLIO</p>
+      </div>
+
+      <div class="boot-info">
+        <span>DATABASE: <b>ONLINE</b></span>
+        <span>MISSIONS: <b id="introMissionCount">00</b></span>
+        <span>STATUS: <b>READY</b></span>
+      </div>
+
+      <button id="startBtn" class="pixel-button start-button">
+        <span class="button-icon">▶</span> INSERT COIN
+      </button>
+
+      <div class="press-start">PRESS ENTER TO START</div>
+    </div>
+
+    <div class="version">VERSION 1.026</div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="content-screen" id="aboutScreen" aria-hidden="true">
+    <header class="gallery-header">
+      <button class="back-button" data-back="intro">◀ TITLE SCREEN</button>
+
+      <div>
+        <span class="gallery-stage">PLAYER DATABASE // 00</span>
+        <h2>ABOUT THE PLAYER</h2>
+      </div>
+
+      <div class="gallery-counter">PROFILE <span>01 / 01</span></div>
+    </header>
+
+    <main class="profile-layout">
+      <div class="about-intro">
+        <div class="about-intro-label">PLAYER INFORMATION // ACCESS GRANTED</div>
+        <h2>HELLO, I'M <span>NATI.</span></h2>
+        <p>
+          CREATIVE PLAYER // EVENT SUPPORT // GRAPHIC EDITING
+        </p>
+      </div>
+
+      <div class="profile-card profile-card-event">
+        <div class="profile-avatar profile-avatar-placeholder">
+
+  <img
+    src="assets/images/profile.jpg"
+    alt=""
+    class="profile-avatar-image"
+  >
+
+  <div class="avatar-overlay"></div>
+
+  <div class="avatar-inner">
+    PLAYER<br>01
+  </div>
+
+</div>
+
+        <div class="profile-data">
+          <div class="profile-name">NATI</div>
+
+          <div class="profile-row">
+            <span>PRONOUNS</span>
+            <strong>SHE / HER</strong>
+          </div>
+
+          <div class="profile-row">
+            <span>TIME ZONE</span>
+            <strong>UTC−6</strong>
+          </div>
+
+          <div class="profile-row">
+            <span>PRIMARY ROLE</span>
+            <strong>EVENT EDITOR</strong>
+          </div>
+
+          <div class="profile-row">
+            <span>STATUS</span>
+            <strong class="green">AVAILABLE FOR COLLABORATION</strong>
+          </div>
+        </div>
+      </div>
+
+      <section class="database-panel about-bio-panel">
+  <div class="panel-kicker">▶ PLAYER BIO</div>
+
+  <p class="bio-copy">
+    Hi! I'm Nati, a creative person who loves making edits for events. This is my resume, where I've put together my experience working with Ducks. However, I also have plenty of previous experience creating event edits for Amino before the platform shut down. I'm always happy to lend a hand, and I'm usually online in the mornings and afternoons. If you ever need help with event graphics or web countdowns for your event, feel free to reach out! You can contact me through my <a href="https://app.duckapps.com.br/c/tienda-estetica-ducks/u/a7huuc" target="_blank" rel="noopener noreferrer">TED profile</a> or find me on Global under the username @natibby.
+  </p>
+</section>
+
+      <div class="about-info-grid">
+        <section class="database-panel language-panel">
+          <div class="panel-kicker">▶ LANGUAGE DATA</div>
+
+          <div class="language-row">
+            <span>SPANISH</span>
+            <div class="language-level">
+              <div class="language-progress spanish"></div>
+            </div>
+            <span>NATIVE</span>
+          </div>
+
+          <div class="language-row">
+            <span>ENGLISH</span>
+            <div class="language-level">
+              <div class="language-progress english"></div>
+            </div>
+            <span>ADVANCED</span>
+          </div>
+
+          <div class="language-row">
+            <span>CHINESE</span>
+            <div class="language-level">
+              <div class="language-progress chinese"></div>
+            </div>
+            <span>INTERMEDIATE</span>
+          </div>
+
+          <div class="language-row">
+            <span>PORTUGUESE</span>
+            <div class="language-level">
+              <div class="language-progress portuguese"></div>
+            </div>
+            <span>BASIC</span>
+          </div>
+
+          <p class="language-note">
+            Portuguese: understands some written/spoken content due to its similarity to Spanish; does not speak it.
+          </p>
+        </section>
+
+        <section class="database-panel skill-panel">
+          <div class="panel-kicker">▶ SKILL TREE</div>
+
+          <div class="skill-tags">
+            <span>GRAPHIC EDITING</span>
+            <span>EVENT CREATIVE SUPPORT</span>
+            <span>WEB COUNTDOWNS</span>
+            <span>TEAM COLLABORATION</span>
+          </div>
+        </section>
+      </div>
+
+      <div class="about-navigation">
+        <div class="profile-bottom-note">
+          PLAYER RECORD LOADED // SELECT A ROLE TO CONTINUE
+        </div>
+
+        <button id="selectMissionBtn" class="pixel-button select-mission-button">
+          SEE EXPERIENCE <span>▶</span>
+        </button>
+      </div>
+    </main>
+  </section>
+
+  <!-- SELECT MISSION -->
+  <section class="screen menu-section hidden-screen" id="menu">
+    <header class="hud">
+      <div class="hud-left">
+        <div class="player">
+          <span class="hud-label">PLAYER</span>
+          <span class="hud-value">01</span>
+        </div>
+
+        <div class="level">
+          <span class="hud-label">MISSIONS</span>
+          <span class="hud-value" id="menuMissionCount">00</span>
+        </div>
+      </div>
+
+      <div class="hud-center">EVENT ARCHIVE</div>
+
+      <div class="hud-right">
+        <div>
+          <span class="hud-label">SCORE</span>
+          <span id="score">008420</span>
+        </div>
+
+        <div class="online">● ONLINE</div>
+      </div>
+    </header>
+
+    <main class="menu-container">
+      <div class="menu-heading">
+        <span class="stage-number">PLAYER DATABASE // SELECT MODE</span>
+        <h2>SELECT MISSION</h2>
+        <p>CHOOSE A ROLE TO EXPLORE</p>
+      </div>
+
+      <div class="stage-list">
+        <article class="stage-card" data-action="editor">
+          <div class="stage-number-big">01</div>
+
+          <div class="stage-info">
+            <span class="stage-status">[ AVAILABLE ]</span>
+            <h3>EDITOR</h3>
+            <p>EVENT GRAPHICS / WEB COUNTDOWNS / CREATIVE SUPPORT</p>
+          </div>
+
+          <button class="stage-button" data-open="editor">
+            ENTER <span>▶</span>
+          </button>
+        </article>
+
+        <article class="stage-card locked" aria-disabled="true">
+          <div class="stage-number-big">02</div>
+
+          <div class="stage-info">
+            <span class="stage-status locked-status">[ LOCKED ]</span>
+            <h3>HELPER</h3>
+            <p>SUPPORT MISSIONS / COMING SOON</p>
+          </div>
+
+          <button class="stage-button" disabled>LOCKED</button>
+        </article>
+
+        <article class="stage-card locked" aria-disabled="true">
+          <div class="stage-number-big">03</div>
+
+          <div class="stage-info">
+            <span class="stage-status locked-status">[ LOCKED ]</span>
+            <h3>VERIFIER</h3>
+            <p>VERIFICATION MISSIONS / COMING SOON</p>
+          </div>
+
+          <button class="stage-button" disabled>LOCKED</button>
+        </article>
+      </div>
+
+      <div class="menu-footer">
+        <span>▲ ▼ SELECT</span>
+        <span>ENTER OPEN</span>
+        <button id="endBtn" class="menu-end-button">END SESSION</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- EDITOR MISSIONS -->
+  <section class="content-screen" id="editorScreen" aria-hidden="true">
+    <header class="gallery-header">
+      <button class="back-button" data-back="menu">◀ SELECT MISSION</button>
+
+      <div>
+        <span class="gallery-stage">ROLE DATABASE // STAGE 01</span>
+        <h2>EDITOR MISSIONS</h2>
+      </div>
+
+      <div class="gallery-counter">
+        MISSIONS <span id="editorMissionCount">00 / 00</span>
+      </div>
+    </header>
+
+    <main class="events-container">
+      <div class="menu-heading">
+        <span class="stage-number">EDITOR // EVENT LOG</span>
+        <h2>SELECT MISSION</h2>
+        <p>SELECT AN EVENT TO VIEW DETAILS AND CREATIVE CONTRIBUTIONS</p>
+      </div>
+
+      <div class="event-list" id="eventList"></div>
+
+      <div class="menu-footer">
+        <span>▲ ▼ SELECT</span>
+        <span>ENTER INSPECT</span>
+        <span>ESC BACK</span>
+      </div>
+    </main>
+  </section>
+
+  <!-- INSPECT -->
+  <section class="content-screen" id="eventDetailScreen" aria-hidden="true">
+    <header class="gallery-header">
+      <button class="back-button" id="eventDetailBack">◀ EVENT LIST</button>
+
+      <div>
+        <span class="gallery-stage" id="detailStage">STAGE 01 // MISSION DATA</span>
+        <h2 id="detailTitle">EVENT TITLE</h2>
+      </div>
+
+      <div class="gallery-counter" id="detailStatus">
+        STATUS <span>COMPLETED</span>
+      </div>
+    </header>
+
+    <main class="detail-container" id="eventDetail"></main>
+  </section>
+
+  <!-- END -->
+  <section class="end-section" id="endScreen">
+    <div class="end-content">
+      <div class="end-glitch">END OF TRANSMISSION</div>
+      <h2>THANK YOU<br>FOR VISITING</h2>
+      <p>END OF EVENT ARCHIVE</p>
+      <button id="restartBtn" class="pixel-button">↻ RESTART</button>
+    </div>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <div class="image-modal" id="imageModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-window modal-window-event">
+      <header class="modal-header">
+        <span id="modalFile">MISSION_ASSET</span>
+        <button id="closeModal">[ X ]</button>
+      </header>
+
+      <div class="modal-content modal-content-event">
+        <div class="image-frame">
+          <img id="modalImage" src="" alt="Event work preview">
+        </div>
+
+        <aside class="asset-info">
+          <div class="info-line">
+            <span>FILE</span>
+            <strong id="modalAssetName">ASSET_001</strong>
+          </div>
+
+          <div class="info-line">
+            <span>TYPE</span>
+            <strong id="modalAssetType">EVENT DESIGN</strong>
+          </div>
+
+          <div class="asset-divider"></div>
+
+          <div class="asset-message">
+            <span>▶ SYSTEM MESSAGE</span>
+            <p id="modalMessage">ASSET SUCCESSFULLY LOADED.</p>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="modal-footer">
+        <span>VISUAL EVIDENCE</span>
+        <span>CLICK X OR ESC TO CLOSE</span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
